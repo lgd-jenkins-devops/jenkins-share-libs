@@ -1,7 +1,6 @@
 def call(String filePath, String bucketName) {
-    echo "Upload  ${filePath} to the bucket ${bucketName}..."
+    echo "Upload  ${filePath}"
     sh """
-        cat ./src/upload.sh
-        ./src/upload.sh ${filePath} ${bucketName}
+        gsutil cp ${filePath} gs://${bucketName}/
     """
 }
