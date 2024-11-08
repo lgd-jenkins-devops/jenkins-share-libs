@@ -4,3 +4,5 @@ def call(String filePath, String bucketName) {
         gsutil cp ${filePath} gs://${bucketName}/
     """
 }
+
+return this
